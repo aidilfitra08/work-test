@@ -16,9 +16,9 @@ const UploadImage = () => {
     }
 
     const region = "ap-southeast-1"
-    const bucketName = "mpindo"
-    const accessKeyId = "EN7KLGSM2IIEXYSXQG5Y"
-    const secretAccessKey = "Ox3K1JPiDcXMUN6kZueMjiHHIi0g3ptK/ttdicQ5y/4"
+    const bucketName = process.env.REACT_APP_S3_BUCKET_NAME
+    const accessKeyId = process.env.REACT_APP_S3_BUCKET_KEY
+    const secretAccessKey = process.env.REACT_APP_S3_BUCKET_SECRET
     // console.log(image.name)
     const s3 = new aws.S3({
         accessKeyId,
